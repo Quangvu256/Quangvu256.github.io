@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vũ Trọng Quang | AI & Data Science Portfolio</title>
-    
+
     <!-- Sử dụng Tailwind CSS qua CDN để phát triển nhanh -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- FontAwesome cho các icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Cấu hình màu sắc tùy chỉnh cho Tailwind -->
     <script>
         tailwind.config = {
@@ -25,10 +26,13 @@
             }
         }
     </script>
-    
+
     <style>
         /* Thêm một chút CSS thuần cho hiệu ứng cuộn mượt */
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
         .gradient-text {
             background-clip: text;
             -webkit-background-clip: text;
@@ -37,6 +41,7 @@
         }
     </style>
 </head>
+
 <body class="bg-darkBg text-gray-300 font-sans antialiased">
 
     <!-- NAVIGATION BAR -->
@@ -48,7 +53,9 @@
                 <a href="#experience" class="hover:text-accent transition-colors">Kinh nghiệm</a>
                 <a href="#projects" class="hover:text-accent transition-colors">Dự án</a>
             </div>
-            <a href="mailto:trongquangvu2004@gmail.com" class="px-4 py-2 bg-accent text-white rounded-md hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30">Liên hệ</a>
+            <a href="mailto:trongquangvu2004@gmail.com"
+                class="px-4 py-2 bg-accent text-white rounded-md hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30">Liên
+                hệ</a>
         </div>
     </nav>
 
@@ -56,20 +63,22 @@
     <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
-                Xin chào, tôi là <br/>
+                Xin chào, tôi là <br />
                 <span class="gradient-text">Vũ Trọng Quang</span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Sinh viên năm cuối ngành Data Science. Đam mê nghiên cứu 
-                <span class="text-white font-semibold">Natural Language Processing (NLP)</span> và 
+                Sinh viên năm cuối ngành Data Science. Đam mê nghiên cứu
+                <span class="text-white font-semibold">Natural Language Processing (NLP)</span> và
                 <span class="text-white font-semibold">Computer Vision</span>.
             </p>
             <div class="flex justify-center space-x-4">
-                <a href="https://github.com/Quangvu256" target="_blank" class="flex items-center space-x-2 px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                <a href="https://github.com/Quangvu256" target="_blank"
+                    class="flex items-center space-x-2 px-6 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
                     <i class="fab fa-github text-xl"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="#projects" class="flex items-center space-x-2 px-6 py-3 border border-gray-600 rounded-lg hover:border-accent hover:text-accent transition-colors">
+                <a href="#projects"
+                    class="flex items-center space-x-2 px-6 py-3 border border-gray-600 rounded-lg hover:border-accent hover:text-accent transition-colors">
                     <i class="fas fa-project-diagram text-xl"></i>
                     <span>Xem Dự Án</span>
                 </a>
@@ -80,17 +89,23 @@
     <!-- KINH NGHIỆM LÀM VIỆC -->
     <section id="experience" class="py-20 px-4 bg-cardBg/30">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-10 border-b border-gray-700 pb-2"><i class="fas fa-briefcase text-accent mr-3"></i>Kinh Nghiệm Chuyên Môn</h2>
-            
+            <h2 class="text-3xl font-bold text-white mb-10 border-b border-gray-700 pb-2"><i
+                    class="fas fa-briefcase text-accent mr-3"></i>Kinh Nghiệm Chuyên Môn</h2>
+
             <div class="relative border-l-2 border-accent pl-8 ml-4">
                 <div class="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-1"></div>
                 <h3 class="text-2xl font-bold text-white">AI Engineer</h3>
-                <p class="text-accent font-semibold mb-2">Lucky Star Pharmaceutical | TP.HCM (Tháng 1/2026 - Hiện tại)</p>
+                <p class="text-accent font-semibold mb-2">Lucky Star Pharmaceutical | TP.HCM (Tháng 1/2026 - Hiện tại)
+                </p>
                 <ul class="list-disc list-outside ml-4 text-gray-400 space-y-2">
-                    <li>Xây dựng <strong class="text-gray-200">MaterialOCR</strong> - Ứng dụng Desktop (Django, PyInstaller) tự động hóa việc nhập liệu CoA.</li>
-                    <li>Tích hợp Mistral AI OCR API trích xuất dữ liệu từ PDF, giảm <strong class="text-gray-200">80-90%</strong> thời gian nhập liệu thủ công.</li>
-                    <li>Phát triển pipeline 5 bước (Exact, Normalize, Alias, Fuzzy Jaccard, AI Semantic Search) để map dữ liệu chuẩn xác.</li>
-                    <li><strong class="text-accent">Thực tế:</strong> Hệ thống đã được deploy và giải quyết triệt để nút thắt cổ chai trong vận hành của công ty.</li>
+                    <li>Xây dựng <strong class="text-gray-200">MaterialOCR</strong> - Ứng dụng Desktop (Django,
+                        PyInstaller) tự động hóa việc nhập liệu CoA.</li>
+                    <li>Tích hợp Mistral AI OCR API trích xuất dữ liệu từ PDF, giảm <strong
+                            class="text-gray-200">80-90%</strong> thời gian nhập liệu thủ công.</li>
+                    <li>Phát triển pipeline 5 bước (Exact, Normalize, Alias, Fuzzy Jaccard, AI Semantic Search) để map
+                        dữ liệu chuẩn xác.</li>
+                    <li><strong class="text-accent">Thực tế:</strong> Hệ thống đã được deploy và giải quyết triệt để nút
+                        thắt cổ chai trong vận hành của công ty.</li>
                 </ul>
             </div>
         </div>
@@ -99,39 +114,43 @@
     <!-- DỰ ÁN NỔI BẬT -->
     <section id="projects" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-10 border-b border-gray-700 pb-2"><i class="fas fa-code text-accent mr-3"></i>Dự Án Nổi Bật</h2>
-            
+            <h2 class="text-3xl font-bold text-white mb-10 border-b border-gray-700 pb-2"><i
+                    class="fas fa-code text-accent mr-3"></i>Dự Án Nổi Bật</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
+
                 <!-- DỰ ÁN 1: BIRD SPECIES (Ưu tiên số 1 kèm ảnh) -->
-                <div class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+                <div
+                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-2xl font-bold text-white">5-Class Bird Species Classification</h3>
                             <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2023</span>
                         </div>
                         <p class="text-gray-400 mb-4">
-                            Dự án phân loại 5 giống chim sử dụng các kỹ thuật trích xuất đặc trưng truyền thống kết hợp với Machine Learning. 
+                            Dự án phân loại 5 giống chim sử dụng các kỹ thuật trích xuất đặc trưng truyền thống kết hợp
+                            với Machine Learning.
                         </p>
                         <ul class="list-disc list-outside ml-4 text-gray-400 space-y-1 mb-6">
                             <li>Xây dựng pipeline tiền xử lý ảnh: HOG, LBP, HSV và data augmentation.</li>
                             <li>Huấn luyện và tinh chỉnh mô hình XGBoost.</li>
-                            <li>Đạt độ chính xác (Accuracy) <strong class="text-white">88-90%</strong> trên tập test.</li>
+                            <li>Đạt độ chính xác (Accuracy) <strong class="text-white">88-90%</strong> trên tập test.
+                            </li>
                         </ul>
-                        
+
                         <!-- Khu vực hiển thị ảnh của người dùng -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 bg-darkBg p-4 rounded-lg">
                             <div>
                                 <p class="text-sm text-center text-gray-500 mb-2">Giao diện Dự đoán (Web UI)</p>
-                                <img src="asset/Ảnh chụp màn hình 2026-07-03 205241.png" alt="Bird Prediction UI" 
-                                     class="w-full h-auto rounded-md border border-gray-700 object-cover"
-                                     onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-48 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh 1</span></div>';">
+                                <img src="asset/Ảnh chụp màn hình 2026-07-03 205241.png" alt="Bird Prediction UI"
+                                    class="w-full h-auto rounded-md border border-gray-700 object-cover"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-48 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh 1</span></div>';">
                             </div>
                             <div>
                                 <p class="text-sm text-center text-gray-500 mb-2">Log Terminal Train Mô hình</p>
-                                <img src="asset/Ảnh chụp màn hình 2026-07-03 205318.png" alt="Terminal Output" 
-                                     class="w-full h-auto rounded-md border border-gray-700 object-cover"
-                                     onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-48 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh 2</span></div>';">
+                                <img src="asset/Ảnh chụp màn hình 2026-07-03 205318.png" alt="Terminal Output"
+                                    class="w-full h-auto rounded-md border border-gray-700 object-cover"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-48 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh 2</span></div>';">
                             </div>
                         </div>
 
@@ -144,25 +163,27 @@
                 </div>
 
                 <!-- DỰ ÁN 2: GraphRAG Chatbot -->
-                <div class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg p-6 flex flex-col md:col-span-2">
+                <div
+                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg p-6 flex flex-col md:col-span-2">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white">RAG Chatbot với GraphRAG</h3>
                         <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2026</span>
                     </div>
                     <p class="text-gray-400 mb-4 flex-grow">
-                        Trợ lý AI ứng dụng cấu trúc GraphRAG kết hợp Tree-of-Thought để tăng cường khả năng suy luận và giảm thiểu ảo giác (hallucination).
+                        Trợ lý AI ứng dụng cấu trúc GraphRAG kết hợp Tree-of-Thought để tăng cường khả năng suy luận và
+                        giảm thiểu ảo giác (hallucination).
                     </p>
                     <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
                         <li>Sử dụng ChromaDB và LangChain để tìm kiếm ngữ cảnh.</li>
                         <li>Tích hợp luật tự phản chiếu (self-reflection rules) qua Tree-of-Thought.</li>
                         <li>Backend mạnh mẽ và độ trễ thấp với FastAPI.</li>
                     </ul>
-                    
+
                     <div class="mt-2 mb-6 bg-darkBg p-4 rounded-lg">
                         <p class="text-sm text-center text-gray-500 mb-2">Giao diện Trợ lý AI (Streamlit UI)</p>
-                        <img src="asset/0823745c-8e17-414c-993d-0de29c720f4d.jpg" alt="RAG Chatbot Streamlit UI" 
-                             class="w-full h-auto rounded-md border border-gray-700 object-cover"
-                             onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-64 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh image_735339.jpg</span></div>';">
+                        <img src="asset/0823745c-8e17-414c-993d-0de29c720f4d.jpg" alt="RAG Chatbot Streamlit UI"
+                            class="w-full h-auto rounded-md border border-gray-700 object-cover"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-64 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh image_735339.jpg</span></div>';">
                     </div>
 
                     <div class="flex flex-wrap gap-2 mt-auto">
@@ -173,28 +194,37 @@
                 </div>
 
                 <!-- DỰ ÁN 3: Multimodal Zero-Shot -->
-                <div class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+                <div
+                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
                     <div class="p-8 flex flex-col h-full">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white">Multimodal Zero-Shot Image Classification (CLIP)</h3>
+                            <h3 class="text-xl font-bold text-white">Multimodal Zero-Shot Image Classification (CLIP)
+                            </h3>
                             <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2026</span>
                         </div>
                         <p class="text-gray-400 mb-4">
-                            Phát triển kiến trúc học đa phương thức sử dụng Contrastive Learning cho tác vụ phân loại ảnh Zero-shot.
+                            Phát triển kiến trúc học đa phương thức sử dụng Contrastive Learning cho tác vụ phân loại
+                            ảnh Zero-shot.
                         </p>
                         <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
                             <li>Tinh chỉnh pipeline trên COCO 2017 với AMP (tối ưu cho 4GB VRAM).</li>
                             <li>Thử nghiệm thay đổi Encoder (ResNeXt, BERT, PhoBERT) cho văn bản tiếng Việt.</li>
                             <li>Đạt 44.26% Zero-shot accuracy.</li>
                         </ul>
-                        
+
                         <!-- 3 Khung ảnh dự án -->
                         <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
                             <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án (Cập nhật sau)</p>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152844.png" alt="Ảnh 1" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
-                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152853.png" alt="Ảnh 2" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
-                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152912.png" alt="Ảnh 3" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
+                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152844.png" alt="Ảnh 1"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
+                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152853.png" alt="Ảnh 2"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
+                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152912.png" alt="Ảnh 3"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
                             </div>
                         </div>
 
@@ -207,27 +237,36 @@
                 </div>
 
                 <!-- DỰ ÁN 4: ViT & ConvNet -->
-                <div class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+                <div
+                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
                     <div class="p-8 flex flex-col h-full">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-white">ViT & ConvNet Hybrid Architectures</h3>
                             <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2025</span>
                         </div>
                         <p class="text-gray-400 mb-4">
-                            Nghiên cứu và huấn luyện từ đầu (from scratch) các kiến trúc CNN, ViT thuần, và Hybrid CVT trên CIFAR-100/ImageNet-100.
+                            Nghiên cứu và huấn luyện từ đầu (from scratch) các kiến trúc CNN, ViT thuần, và Hybrid CVT
+                            trên CIFAR-100/ImageNet-100.
                         </p>
                         <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
                             <li>Cải thiện accuracy từ 48% (ViT thuần) lên 60% (CVT) trên CIFAR-100.</li>
-                            <li>Phát hiện: CvT-13 đạt ~77% accuracy (so với 80% của ResNet-34) nhưng ít hơn 30% parameter.</li>
+                            <li>Phát hiện: CvT-13 đạt ~77% accuracy (so với 80% của ResNet-34) nhưng ít hơn 30%
+                                parameter.</li>
                         </ul>
-                        
+
                         <!-- 3 Khung ảnh dự án -->
                         <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
                             <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án </p>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-                                <img src="asset/image.png" alt="Ảnh 1" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
-                                <img src="asset/image copy.png" alt="Ảnh 2" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
-                                <img src="asset/image copy 2.png" alt="Ảnh 3" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
+                                <img src="asset/image.png" alt="Ảnh 1"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
+                                <img src="asset/image copy.png" alt="Ảnh 2"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
+                                <img src="asset/image copy 2.png" alt="Ảnh 3"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
                             </div>
                         </div>
 
@@ -240,7 +279,8 @@
                 </div>
 
                 <!-- DỰ ÁN 5: Pollution Level Prediction -->
-                <div class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+                <div
+                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
                     <div class="p-8 flex flex-col h-full">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-white">Pollution Level Prediction System</h3>
@@ -253,14 +293,20 @@
                             <li>Xây dựng luồng tự động thu thập, làm sạch và chuẩn hóa dữ liệu.</li>
                             <li>Huấn luyện Random Forest đạt 92.2% precision trong việc nhận diện mốc ô nhiễm.</li>
                         </ul>
-                        
+
                         <!-- 3 Khung ảnh dự án -->
                         <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
                             <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án</p>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-                                <img src="asset/project5_1.jpg" alt="Ảnh 1" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
-                                <img src="asset/project5_2.jpg" alt="Ảnh 2" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
-                                <img src="asset/project5_3.jpg" alt="Ảnh 3" class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain" onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
+                                <img src="asset/project5_1.jpg" alt="Ảnh 1"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
+                                <img src="asset/project5_2.jpg" alt="Ảnh 2"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
+                                <img src="asset/project5_3.jpg" alt="Ảnh 3"
+                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
                             </div>
                         </div>
 
@@ -282,4 +328,5 @@
     </footer>
 
 </body>
+
 </html>

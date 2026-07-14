@@ -186,6 +186,85 @@
                             onerror="this.onerror=null; this.outerHTML='<div class=\'w-full h-64 bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600\'><span class=\'text-xs text-gray-500\'>Không tìm thấy file ảnh image_735339.jpg</span></div>';">
                     </div>
 
+                    <!-- DỰ ÁN 3: Multimodal Zero-Shot -->
+                    <div
+                        class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white">Nghiên cứu Học Tương phản Đa Phương thức & Tối
+                                    ưu hóa Mô hình CLIP</h3>
+                                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2025</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                Nghiên cứu phương pháp học tương phản (contrastive learning) cho bài toán phân loại ảnh
+                                zero-shot không giám sát. Phát triển và tinh chỉnh các biến thể của mô hình nền tảng
+                                CLIP trong điều kiện tài nguyên phần cứng giới hạn (GPU 4GB VRAM).
+                            </p>
+                            <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-2 mb-6">
+                                <li><strong class="text-gray-200">Phát triển 3 biến thể mô hình:</strong> Triển khai
+                                    trên PyTorch mô hình BaseCLIP (ResNet-50 + Text Transformer), CustomCLIP (ResNeXt-50
+                                    + BERT-base-uncased) và phiên bản Việt hóa CLIP-Vi sử dụng PhoBERT Tokenizer.</li>
+                                <li><strong class="text-gray-200">Chiến lược tinh chỉnh chọn lọc:</strong> Tiết kiệm tài
+                                    nguyên tính toán bằng cách đóng băng các tầng thấp và chỉ fine-tune lớp cuối của
+                                    BERT/BERT-like và layer4 của ResNet/ResNeXt. Áp dụng warmup dài (14 epoch) cho mô
+                                    hình CLIP-Vi để ngăn chặn catastrophic forgetting.</li>
+                                <li><strong class="text-gray-200">Kết quả thực nghiệm định lượng:</strong> CustomCLIP
+                                    đạt độ chính xác Zero-shot <strong class="text-accent">44.26%</strong> trên 80 lớp
+                                    của COCO (vượt trội so với 42.65% của baseline). Phiên bản CLIP-Vi thích ứng tiếng
+                                    Việt đạt <strong class="text-accent">19.63%</strong> trong điều kiện tập dữ liệu nhỏ
+                                    (5.000 ảnh).</li>
+                                <li><strong class="text-gray-200">Phát hiện khoa học (Trade-off & Lỗi ngữ
+                                        nghĩa):</strong> Chỉ ra sự đánh đổi giữa điểm số định lượng và khả năng tổng
+                                    quát hóa thông qua Case Study. CustomCLIP bị overfitting vào đặc trưng nhiễu (dự
+                                    đoán voi thành "bottle"), trong khi Baseline và CLIP-Vi tạo ra các "lỗi ngữ nghĩa
+                                    hợp lý" (semantically plausible errors - ví dụ dự đoán cá mập ngoài tập huấn luyện
+                                    thành "vấn lướt sóng").</li>
+                            </ul>
+
+                            <!-- 3 Khung ảnh dự án -->
+                            <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
+                                <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa từ Khóa luận tốt
+                                    nghiệp</p>
+                                <div class="flex flex-col gap-4 w-full">
+                                    <div>
+                                        <p class="text-xs text-gray-400 mb-1">Ảnh 1: Sơ đồ kiến trúc và luồng xử lý CLIP
+                                            (Hình 6 trong Khóa luận)</p>
+                                        <img src="asset/Picture6.png"
+                                            alt="Sơ đồ hoạt động CLIP"
+                                            class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 1: Sơ đồ hoạt động CLIP (Hình 6 trong Khóa luận)</span></div>';">
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-400 mb-1">Ảnh 2: Phân bố độ chính xác (Accuracy)
+                                            trên từng lớp của mô hình tiếng Việt CLIP-Vi (Biểu đồ 6 trong Khóa luận)</p>
+                                        <img src="asset/Picture9.png"
+                                            alt="Phân bố Accuracy của CLIP-Vi"
+                                            class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 2: Phân bố Accuracy trên từng lớp của CLIP-Vi (Biểu đồ 6 trong Khóa luận)</span></div>';">
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-gray-400 mb-1">Ảnh 3: Giao diện dự đoán thành công đối
+                                            tượng 'Con voi' bằng tiếng Việt của ứng dụng web CLIP-Vi (Hình 13 trong Khóa
+                                            luận)</p>
+                                        <img src="asset/Picture10.png"
+                                            alt="Giao diện Web dự đoán với CLIP-Vi"
+                                            class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 3: Giao diện Web dự đoán 'Con voi' với CLIP-Vi (Hình 13 trong Khóa luận)</span></div>';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Contrastive
+                                    Learning</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">CLIP</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">BERT & PhoBERT</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">ResNeXt</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">PyTorch</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">GraphRAG</span>
                         <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">LangChain</span>
@@ -193,142 +272,126 @@
                     </div>
                 </div>
 
-                <!-- DỰ ÁN 3: Multimodal Zero-Shot -->
-                <div
-                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white">Multimodal Zero-Shot Image Classification (CLIP)
-                            </h3>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2026</span>
-                        </div>
-                        <p class="text-gray-400 mb-4">
-                            Phát triển kiến trúc học đa phương thức sử dụng Contrastive Learning cho tác vụ phân loại
-                            ảnh Zero-shot.
-                        </p>
-                        <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
-                            <li>Tinh chỉnh pipeline trên COCO 2017 với AMP (tối ưu cho 4GB VRAM).</li>
-                            <li>Thử nghiệm thay đổi Encoder (ResNeXt, BERT, PhoBERT) cho văn bản tiếng Việt.</li>
-                            <li>Đạt 44.26% Zero-shot accuracy.</li>
-                        </ul>
-
-                        <!-- 3 Khung ảnh dự án -->
-                        <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
-                            <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án</p>
-                            <div class="flex flex-col gap-4 w-full">
-                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152844.png" alt="Ảnh 1"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
-                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152853.png" alt="Ảnh 2"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
-                                <img src="asset/Ảnh chụp màn hình 2026-07-10 152912.png" alt="Ảnh 3"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">PyTorch</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">CLIP</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">NLP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DỰ ÁN 4: ViT & ConvNet -->
-                <div
-                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white">Nghiên cứu & Huấn luyện Kiến trúc Lai CNN-Transformer (CvT)</h3>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2025</span>
-                        </div>
-                        <p class="text-gray-400 mb-4">
-                            Nghiên cứu phương pháp tích hợp thiên kiến quy nạp (local inductive bias) của CNN vào cơ chế tự chú ý (self-attention) toàn cục của Vision Transformer (ViT). Huấn luyện từ đầu (from scratch) các mô hình trên PyTorch để so sánh hiệu năng trích xuất đặc trưng và khả năng tổng quát hóa.
-                        </p>
-                        <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-2 mb-6">
-                            <li><strong class="text-gray-200">Xây dựng quy trình tự động:</strong> Triển khai pipeline huấn luyện tối ưu trên Google Colab Pro+ (GPU NVIDIA L4), tích hợp mixed-precision (AMP), Cosine Annealing LR và cơ chế Experiment Tracking/Checkpointing qua Google Drive.</li>
-                            <li><strong class="text-gray-200">Chứng minh thực nghiệm:</strong> Việc đưa lớp tích chập vào token embedding và cơ chế attention (CvT two-stage) giúp tăng độ chính xác trên CIFAR-100 vượt trội từ <strong class="text-accent">48%</strong> (ViT thuần) lên <strong class="text-accent">60%</strong>.</li>
-                            <li><strong class="text-gray-200">Hiệu quả tham số vượt trội:</strong> Trên tập ImageNet-100, mô hình lai CvT-13 đạt độ chính xác <strong class="text-accent">76-77%</strong> (tiệm cận mức 80% của ResNet-34) nhưng sử dụng ít hơn <strong class="text-accent">30% tham số</strong> (14.97M so với 21.34M của ResNet-34).</li>
-                            <li><strong class="text-gray-200">Phân tích sâu Overfitting:</strong> Sử dụng các biểu đồ Loss/Accuracy và phân phối độ chính xác từng lớp (Per-class Accuracy Histogram) để làm rõ hiện tượng overfitting của ViT thuần trên dữ liệu nhỏ và cách CvT khắc phục bằng cấu trúc lai đa tầng.</li>
-                        </ul>
-
-                        <!-- 3 Khung ảnh dự án -->
-                        <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
-                            <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa khuyến nghị từ Báo cáo thực tập</p>
-                            <div class="flex flex-col gap-4 w-full">
-                                <div>
-                                    <p class="text-xs text-gray-400 mb-1">Ảnh 1: Sơ đồ tổng quát Pipeline thực nghiệm Deep Learning (Hình 5 trong Báo cáo)</p>
-                                    <img src="asset/Picture5.png" alt="Sơ đồ Pipeline thực nghiệm"
-                                        class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                        onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 1: Sơ đồ Pipeline thực nghiệm (Hình 5 trong báo cáo)</span></div>';">
-                                </div>
-                                <div>
-                                    <p class="text-xs text-gray-400 mb-1">Ảnh 2: Biểu đồ so sánh Validation Loss - Chứng minh hiện tượng Overfitting của ViT (Biểu đồ 7 trong Báo cáo)</p>
-                                    <img src="asset/Picture3.png" alt="Biểu đồ so sánh Validation Loss"
-                                        class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                        onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 2: Biểu đồ so sánh Validation Loss (Biểu đồ 7 trong báo cáo)</span></div>';">
-                                </div>
-                                <div>
-                                    <p class="text-xs text-gray-400 mb-1">Ảnh 3: Biểu đồ Histogram phân phối độ chính xác từng lớp trên ImageNet-100 (Hình 7 trong Báo cáo)</p>
-                                    <img src="asset/Picture4.png" alt="Histogram Per-class Accuracy trên ImageNet-100"
-                                        class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                        onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 3: Histogram Per-class Accuracy trên ImageNet-100 (Hình 7 trong báo cáo)</span></div>';">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Convolutional Vision Transformer (CvT)</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Vision Transformer (ViT)</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">ResNet / CNN</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">PyTorch</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DỰ ÁN 5: Pollution Level Prediction -->
-                <div
-                    class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white">Pollution Level Prediction System</h3>
-                            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2023</span>
-                        </div>
-                        <p class="text-gray-400 mb-4">
-                            Hệ thống dự đoán mức độ ô nhiễm không khí End-to-End dựa trên dữ liệu cảm biến liên tục.
-                        </p>
-                        <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
-                            <li>Xây dựng luồng tự động thu thập, làm sạch và chuẩn hóa dữ liệu.</li>
-                            <li>Huấn luyện Random Forest đạt 92.2% precision trong việc nhận diện mốc ô nhiễm.</li>
-                        </ul>
-
-                        <!-- 3 Khung ảnh dự án -->
-                        <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
-                            <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án</p>
-                            <div class="flex flex-col gap-4 w-full">
-                                <img src="asset/project5_1.jpg" alt="Ảnh 1"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
-                                <img src="asset/project5_2.jpg" alt="Ảnh 2"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
-                                <img src="asset/project5_3.jpg" alt="Ảnh 3"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Streamlit</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Flask</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Random Forest</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        </div>
+        </div>
+
+        <!-- DỰ ÁN 4: ViT & ConvNet -->
+        <div
+            class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+            <div class="p-8 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-white">Nghiên cứu & Huấn luyện Kiến trúc Lai
+                        CNN-Transformer (CvT)</h3>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2025</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Nghiên cứu phương pháp tích hợp thiên kiến quy nạp (local inductive bias) của CNN vào cơ chế
+                    tự chú ý (self-attention) toàn cục của Vision Transformer (ViT). Huấn luyện từ đầu (from
+                    scratch) các mô hình trên PyTorch để so sánh hiệu năng trích xuất đặc trưng và khả năng tổng
+                    quát hóa.
+                </p>
+                <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-2 mb-6">
+                    <li><strong class="text-gray-200">Xây dựng quy trình tự động:</strong> Triển khai pipeline
+                        huấn luyện tối ưu trên Google Colab Pro+ (GPU NVIDIA L4), tích hợp mixed-precision
+                        (AMP), Cosine Annealing LR và cơ chế Experiment Tracking/Checkpointing qua Google Drive.
+                    </li>
+                    <li><strong class="text-gray-200">Chứng minh thực nghiệm:</strong> Việc đưa lớp tích chập
+                        vào token embedding và cơ chế attention (CvT two-stage) giúp tăng độ chính xác trên
+                        CIFAR-100 vượt trội từ <strong class="text-accent">48%</strong> (ViT thuần) lên <strong
+                            class="text-accent">60%</strong>.</li>
+                    <li><strong class="text-gray-200">Hiệu quả tham số vượt trội:</strong> Trên tập
+                        ImageNet-100, mô hình lai CvT-13 đạt độ chính xác <strong class="text-accent">76-77%</strong>
+                        (tiệm cận mức 80% của ResNet-34) nhưng sử dụng
+                        ít hơn <strong class="text-accent">30% tham số</strong> (14.97M so với 21.34M của
+                        ResNet-34).</li>
+                    <li><strong class="text-gray-200">Phân tích sâu Overfitting:</strong> Sử dụng các biểu đồ
+                        Loss/Accuracy và phân phối độ chính xác từng lớp (Per-class Accuracy Histogram) để làm
+                        rõ hiện tượng overfitting của ViT thuần trên dữ liệu nhỏ và cách CvT khắc phục bằng cấu
+                        trúc lai đa tầng.</li>
+                </ul>
+
+                <!-- 3 Khung ảnh dự án -->
+                <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
+                    <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa khuyến nghị từ Báo cáo
+                        thực tập</p>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Ảnh 1: Sơ đồ tổng quát Pipeline thực nghiệm
+                                Deep Learning (Hình 5 trong Báo cáo)</p>
+                            <img src="asset/Picture5.png" alt="Sơ đồ Pipeline thực nghiệm"
+                                class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 1: Sơ đồ Pipeline thực nghiệm (Hình 5 trong báo cáo)</span></div>';">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Ảnh 2: Biểu đồ so sánh Validation Loss - Chứng
+                                minh hiện tượng Overfitting của ViT (Biểu đồ 7 trong Báo cáo)</p>
+                            <img src="asset/Picture3.png" alt="Biểu đồ so sánh Validation Loss"
+                                class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 2: Biểu đồ so sánh Validation Loss (Biểu đồ 7 trong báo cáo)</span></div>';">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Ảnh 3: Biểu đồ Histogram phân phối độ chính
+                                xác từng lớp trên ImageNet-100 (Hình 7 trong Báo cáo)</p>
+                            <img src="asset/Picture4.png" alt="Histogram Per-class Accuracy trên ImageNet-100"
+                                class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 3: Histogram Per-class Accuracy trên ImageNet-100 (Hình 7 trong báo cáo)</span></div>';">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Convolutional Vision
+                        Transformer (CvT)</span>
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Vision Transformer
+                        (ViT)</span>
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">ResNet / CNN</span>
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">PyTorch</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DỰ ÁN 5: Pollution Level Prediction -->
+        <div
+            class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
+            <div class="p-8 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-white">Pollution Level Prediction System</h3>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2023</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Hệ thống dự đoán mức độ ô nhiễm không khí End-to-End dựa trên dữ liệu cảm biến liên tục.
+                </p>
+                <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
+                    <li>Xây dựng luồng tự động thu thập, làm sạch và chuẩn hóa dữ liệu.</li>
+                    <li>Huấn luyện Random Forest đạt 92.2% precision trong việc nhận diện mốc ô nhiễm.</li>
+                </ul>
+
+                <!-- 3 Khung ảnh dự án -->
+                <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
+                    <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án</p>
+                    <div class="flex flex-col gap-4 w-full">
+                        <img src="asset/project5_1.jpg" alt="Ảnh 1"
+                            class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
+                        <img src="asset/project5_2.jpg" alt="Ảnh 2"
+                            class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
+                        <img src="asset/project5_3.jpg" alt="Ảnh 3"
+                            class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Streamlit</span>
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Flask</span>
+                    <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Random Forest</span>
+                </div>
+            </div>
+        </div>
+
+        </div>
         </div>
     </section>
 

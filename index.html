@@ -139,7 +139,7 @@
                         </ul>
 
                         <!-- Khu vực hiển thị ảnh của người dùng -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 bg-darkBg p-4 rounded-lg">
+                        <div class="flex flex-col gap-4 mt-6 bg-darkBg p-4 rounded-lg">
                             <div>
                                 <p class="text-sm text-center text-gray-500 mb-2">Giao diện Dự đoán (Web UI)</p>
                                 <img src="asset/Ảnh chụp màn hình 2026-07-03 205241.png" alt="Bird Prediction UI"
@@ -215,7 +215,7 @@
                         <!-- 3 Khung ảnh dự án -->
                         <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
                             <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án (Cập nhật sau)</p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+                            <div class="flex flex-col gap-4 w-full">
                                 <img src="asset/Ảnh chụp màn hình 2026-07-10 152844.png" alt="Ảnh 1"
                                     class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
                                     onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
@@ -241,38 +241,48 @@
                     class="bg-cardBg rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col md:col-span-2">
                     <div class="p-8 flex flex-col h-full">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white">ViT & ConvNet Hybrid Architectures</h3>
+                            <h3 class="text-xl font-bold text-white">Nghiên cứu & Huấn luyện Kiến trúc Lai CNN-Transformer (CvT)</h3>
                             <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">2025</span>
                         </div>
                         <p class="text-gray-400 mb-4">
-                            Nghiên cứu và huấn luyện từ đầu (from scratch) các kiến trúc CNN, ViT thuần, và Hybrid CVT
-                            trên CIFAR-100/ImageNet-100.
+                            Nghiên cứu phương pháp tích hợp thiên kiến quy nạp (local inductive bias) của CNN vào cơ chế tự chú ý (self-attention) toàn cục của Vision Transformer (ViT). Huấn luyện từ đầu (from scratch) các mô hình trên PyTorch để so sánh hiệu năng trích xuất đặc trưng và khả năng tổng quát hóa.
                         </p>
-                        <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-1 mb-6">
-                            <li>Cải thiện accuracy từ 48% (ViT thuần) lên 60% (CVT) trên CIFAR-100.</li>
-                            <li>Phát hiện: CvT-13 đạt ~77% accuracy (so với 80% của ResNet-34) nhưng ít hơn 30%
-                                parameter.</li>
+                        <ul class="list-disc list-outside ml-4 text-gray-400 text-sm space-y-2 mb-6">
+                            <li><strong class="text-gray-200">Xây dựng quy trình tự động:</strong> Triển khai pipeline huấn luyện tối ưu trên Google Colab Pro+ (GPU NVIDIA L4), tích hợp mixed-precision (AMP), Cosine Annealing LR và cơ chế Experiment Tracking/Checkpointing qua Google Drive.</li>
+                            <li><strong class="text-gray-200">Chứng minh thực nghiệm:</strong> Việc đưa lớp tích chập vào token embedding và cơ chế attention (CvT two-stage) giúp tăng độ chính xác trên CIFAR-100 vượt trội từ <strong class="text-accent">48%</strong> (ViT thuần) lên <strong class="text-accent">60%</strong>.</li>
+                            <li><strong class="text-gray-200">Hiệu quả tham số vượt trội:</strong> Trên tập ImageNet-100, mô hình lai CvT-13 đạt độ chính xác <strong class="text-accent">76-77%</strong> (tiệm cận mức 80% của ResNet-34) nhưng sử dụng ít hơn <strong class="text-accent">30% tham số</strong> (14.97M so với 21.34M của ResNet-34).</li>
+                            <li><strong class="text-gray-200">Phân tích sâu Overfitting:</strong> Sử dụng các biểu đồ Loss/Accuracy và phân phối độ chính xác từng lớp (Per-class Accuracy Histogram) để làm rõ hiện tượng overfitting của ViT thuần trên dữ liệu nhỏ và cách CvT khắc phục bằng cấu trúc lai đa tầng.</li>
                         </ul>
 
                         <!-- 3 Khung ảnh dự án -->
                         <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
-                            <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án </p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-                                <img src="asset/image.png" alt="Ảnh 1"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
-                                <img src="asset/image copy.png" alt="Ảnh 2"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 2</span></div>';">
-                                <img src="asset/image copy 2.png" alt="Ảnh 3"
-                                    class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
-                                    onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 3</span></div>';">
+                            <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa khuyến nghị từ Báo cáo thực tập</p>
+                            <div class="flex flex-col gap-4 w-full">
+                                <div>
+                                    <p class="text-xs text-gray-400 mb-1">Ảnh 1: Sơ đồ tổng quát Pipeline thực nghiệm Deep Learning (Hình 5 trong Báo cáo)</p>
+                                    <img src="asset/Picture5.png" alt="Sơ đồ Pipeline thực nghiệm"
+                                        class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                        onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 1: Sơ đồ Pipeline thực nghiệm (Hình 5 trong báo cáo)</span></div>';">
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 mb-1">Ảnh 2: Biểu đồ so sánh Validation Loss - Chứng minh hiện tượng Overfitting của ViT (Biểu đồ 7 trong Báo cáo)</p>
+                                    <img src="asset/Picture3.png" alt="Biểu đồ so sánh Validation Loss"
+                                        class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                        onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 2: Biểu đồ so sánh Validation Loss (Biểu đồ 7 trong báo cáo)</span></div>';">
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 mb-1">Ảnh 3: Biểu đồ Histogram phân phối độ chính xác từng lớp trên ImageNet-100 (Hình 7 trong Báo cáo)</p>
+                                    <img src="asset/Picture4.png" alt="Histogram Per-class Accuracy trên ImageNet-100"
+                                        class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
+                                        onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Ảnh 3: Histogram Per-class Accuracy trên ImageNet-100 (Hình 7 trong báo cáo)</span></div>';">
+                                </div>
                             </div>
                         </div>
 
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">ViT</span>
-                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">ResNet</span>
+                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Convolutional Vision Transformer (CvT)</span>
+                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">Vision Transformer (ViT)</span>
+                            <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">ResNet / CNN</span>
                             <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">PyTorch</span>
                         </div>
                     </div>
@@ -297,7 +307,7 @@
                         <!-- 3 Khung ảnh dự án -->
                         <div class="mt-auto mb-6 bg-darkBg p-4 rounded-lg">
                             <p class="text-sm text-center text-gray-500 mb-4">Hình ảnh minh họa dự án</p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+                            <div class="flex flex-col gap-4 w-full">
                                 <img src="asset/project5_1.jpg" alt="Ảnh 1"
                                     class="w-full max-w-full h-auto rounded-md border border-gray-700 object-contain"
                                     onerror="this.onerror=null; this.outerHTML='<div class=\'w-full bg-gray-800 flex items-center justify-center rounded-md border border-dashed border-gray-600 py-10\'><span class=\'text-xs text-gray-500\'>Khung ảnh 1</span></div>';">
